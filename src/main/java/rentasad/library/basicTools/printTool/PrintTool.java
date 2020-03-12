@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 import javax.print.PrintService;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.printing.PDFPageable;
 
 /**
  * 
@@ -130,8 +131,8 @@ public class PrintTool
 
                     doc = PDDocument.load(fileToPrint);
                     // PDPageContentStream contentStream = new PDPageContentStream(doc, , true, true, true);
-
-                    doc.silentPrint(printJob);
+                    printJob.setPageable(new PDFPageable(doc));
+                    printJob.print();
                     printsuccess = true;
 
                 } catch (Exception ex)
@@ -329,7 +330,8 @@ public class PrintTool
 
                     doc = PDDocument.load(pdfInputStream);
                     
-                    doc.silentPrint(printJob);
+                    printJob.setPageable(new PDFPageable(doc));
+                    printJob.print();
                     printsuccess = true;
 
                 } catch (Exception ex)

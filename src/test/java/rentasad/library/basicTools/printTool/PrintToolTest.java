@@ -7,12 +7,11 @@ import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.gustini.library.db.MySQLConnection;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import rentasad.library.basicTools.printTool.PrintTool;
+import rentasad.library.db.MySQLConnection;
 
 /**
  * 
