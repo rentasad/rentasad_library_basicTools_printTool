@@ -1,17 +1,7 @@
 package rentasad.library.basicTools.printTool;
 
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
-
-import rentasad.library.db.MYSQLConnection;
 
 /**
  * 
@@ -28,7 +18,8 @@ import rentasad.library.db.MYSQLConnection;
  */
 public class PrintToolTest
 {
-    private PrintTool printTool;
+    @SuppressWarnings("unused")
+	private PrintTool printTool;
     
     
     @Before
